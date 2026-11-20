@@ -111,6 +111,7 @@ A deeply customized Android QEMU frontend based on Limbo Emulator, supporting mu
 ### 4. 切换主题
 
 **设置 → 界面 → 主题**，可选：
+
 - 跟随系统
 - 浅色
 - 深色
@@ -408,7 +409,7 @@ text
 limbo-android-lib/src/main/jniLibs/arm64/
  ├─ libqemu-system-x86_64-11.1.1.so
  ├─ libqemu-system-aarch64.so
- ├─ libqemu-system-aarch64-v2.so      # Inferno 
+ ├─ libqemu-system-aarch64-v2.so      # Inferno
  ├─ libqemu-system-ppc.so
  ├─ libqemu-system-sparc.so
  ├─ libSDL2.so
