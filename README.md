@@ -141,13 +141,19 @@ cd limbo_qemu
 
 # APK 输出路径
 # limbo-android-x86/build/outputs/apk/debug/limbo-android-x86-debug.apk
-安装到设备
-bash
+```
+
+### 安装到设备
+
+```bash
 adb install -r limbo-android-x86/build/outputs/apk/debug/limbo-android-x86-debug.apk
-原生库准备
+```
+
+### 原生库准备
+
 QEMU 二进制和依赖库需要单独编译或从 Releases 获取，放入：
 
-text
+```text
 limbo-android-lib/src/main/jniLibs/arm64/
  ├─ libqemu-system-x86_64-11.1.1.so
  ├─ libqemu-system-aarch64.so
@@ -160,8 +166,13 @@ limbo-android-lib/src/main/jniLibs/arm64/
  ├─ libEGL_angle.so
  ├─ libGLESv2_angle.so
  └─ ...
-📂 项目结构
-text
+```
+
+---
+
+## 📂 项目结构
+
+```text
 limbo_qemu/
 ├── limbo-android-lib/          # 核心库（Java + JNI + 资源）
 │   ├── src/main/java/          # Java 源码
@@ -192,205 +203,209 @@ limbo_qemu/
 ├── limbo-android-ppc/          # PPC 构建入口
 ├── limbo-android-sparc/        # SPARC 构建入口
 └── README.md
-🧩 相关项目
-Limbo Emulator — 原始项目，Max Kastanas 开发
-https://github.com/limboemu/limbo
+```
 
-QEMU — 通用机器模拟器
-https://www.qemu.org
+---
 
-ALS (AnyLaySys) — Gunyah / GZVM 加速
-https://github.com/AnyLaySys/als
+## 🧩 相关项目
 
-SDL2 — 跨平台多媒体库
-https://www.libsdl.org
+- **Limbo Emulator** — 原始项目，Max Kastanas 开发  
+  https://github.com/limboemu/limbo
 
-virglrenderer — VirtIO GPU 渲染器
-https://gitlab.freedesktop.org/virgl/virglrenderer
+- **QEMU** — 通用机器模拟器  
+  https://www.qemu.org
 
-🤝 贡献
+- **ALS (AnyLaySys)** — Gunyah / GZVM 加速  
+  https://github.com/AnyLaySys/als
+
+- **SDL2** — 跨平台多媒体库  
+  https://www.libsdl.org
+
+- **virglrenderer** — VirtIO GPU 渲染器  
+  https://gitlab.freedesktop.org/virgl/virglrenderer
+
+---
+
+## 🤝 贡献
+
 欢迎提交 Issue 和 Pull Request。
 
-Fork 本仓库
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/xxx`)
+3. 提交改动 (`git commit -m 'feat: add xxx'`)
+4. 推送分支 (`git push origin feature/xxx`)
+5. 提交 Pull Request
 
-创建特性分支 (git checkout -b feature/xxx)
+---
 
-提交改动 (git commit -m 'feat: add xxx')
+## 📜 许可证
 
-推送分支 (git push origin feature/xxx)
+本项目整体遵循 **GNU General Public License v3.0** 发布。
 
-提交 Pull Request
-
-📜 许可证
-本项目整体遵循 GNU General Public License v3.0 发布。
-
-原始 Limbo 代码：Copyright (C) Max Kastanas 2012，GPL-2.0-or-later
-
-本项目修改：Copyright (C) 2024-2026 ANIPLXUAN，GPL-3.0-or-later
+- 原始 Limbo 代码：Copyright (C) Max Kastanas 2012，GPL-2.0-or-later
+- 本项目修改：Copyright (C) 2024-2026 ANIPLXUAN，GPL-3.0-or-later
 
 完整许可证文本：
 
-COPYING — GPL v3.0 全文
+- [COPYING](COPYING) — GPL v3.0 全文
+- [COPYING.GPLv2](COPYING.GPLv2) — GPL v2.0 全文（原始 Limbo）
 
-COPYING.GPLv2 — GPL v2.0 全文（原始 Limbo）
+### 第三方组件许可
 
-第三方组件许可
-组件	许可证
-Limbo (original)	GPL-2.0-or-later
-QEMU	GPL-2.0-or-later
-SDL2	zlib License
-virglrenderer	MIT License
-ALS (Gunyah-qemu / GZVM-qemu)	参见 ALS LICENSE
-🙏 致谢
-Limboemu — Limbo Emulator 原作者
+| 组件 | 许可证 |
+|---|---|
+| Limbo (original) | GPL-2.0-or-later |
+| QEMU | GPL-2.0-or-later |
+| SDL2 | zlib License |
+| virglrenderer | MIT License |
+| ALS (Gunyah-qemu / GZVM-qemu) | 参见 [ALS LICENSE](https://github.com/AnyLaySys/als) |
 
-AnyLaySys — Gunyah / GZVM 加速实现
+---
 
-QEMU 团队 — 强大的机器模拟器
+## 🙏 致谢
 
-所有 Limbo 社区贡献者
+- **Limboemu** — Limbo Emulator 原作者
+- **AnyLaySys** — Gunyah / GZVM 加速实现
+- **QEMU 团队** — 强大的机器模拟器
+- 所有 Limbo 社区贡献者
 
-📮 联系方式
-GitHub Issues: 提交问题
+---
 
-GitHub Discussions: 参与讨论
+## 📮 联系方式
 
-QQ 群: 点击加入
+- GitHub Issues: [提交问题](https://github.com/ANIPLXUAN/limbo_aniplus/issues)
+- GitHub Discussions: [参与讨论](https://github.com/ANIPLXUAN/limbo_aniplus/discussions)
+- QQ 群: [点击加入](https://qm.qq.com/q/v43fiddffU)
 
-<p align="center"> <b>Limbo ANIPL Plus</b><br> Made with ❤️ by ANIPLXUAN </p>
-English
-✨ Features
-🖥️ Multi-Architecture Support
-x86_64 — Traditional PC emulation (Windows / Linux)
+---
 
-AArch64 — ARM64 Linux emulation
+<p align="center">
+  <b>Limbo ANIPL Plus</b><br>
+  Made with ❤️ by ANIPLXUAN
+</p>
 
-PPC — PowerPC emulation
+---
 
-SPARC — SPARC emulation
+# English
 
-Inferno AArch64 — Experimental iOS emulation branch based on Inferno
+## ✨ Features
+
+### 🖥️ Multi-Architecture Support
+
+- **x86_64** — Traditional PC emulation (Windows / Linux)
+- **AArch64** — ARM64 Linux emulation
+- **PPC** — PowerPC emulation
+- **SPARC** — SPARC emulation
+- **Inferno AArch64** — Experimental iOS emulation branch based on Inferno
 
 Each VM stores its own architecture configuration. Architecture can be selected at creation time and is displayed in the VM list.
 
-🎮 Graphics & Acceleration
-VirtIO GPU — virtio-gpu-pci / virtio-gpu-gl-pci / virtio-vga-gl
+### 🎮 Graphics & Acceleration
 
-Zink Mode — venus=on,blob=on,hostmem=1G (Vulkan passthrough)
-
-GLES Backend Switching — System GLES / ANGLE (Vulkan)
-
-KVM — x86 / ARM hardware acceleration
-
-Gunyah / GZVM — aarch64 dedicated accelerators (based on ALS)
-
-TCG — Single-threaded / MTTCG multi-threaded
+- **VirtIO GPU** — `virtio-gpu-pci` / `virtio-gpu-gl-pci` / `virtio-vga-gl`
+- **Zink Mode** — `venus=on,blob=on,hostmem=1G` (Vulkan passthrough)
+- **GLES Backend Switching** — System GLES / ANGLE (Vulkan)
+- **KVM** — x86 / ARM hardware acceleration
+- **Gunyah / GZVM** — aarch64 dedicated accelerators (based on ALS)
+- **TCG** — Single-threaded / MTTCG multi-threaded
 
 The four accelerators (KVM / TCG / Gunyah / GZVM) are mutually exclusive; selecting one automatically deselects the others.
 
-💾 Storage & Devices
-IDE / SCSI / VirtIO / NVMe disk interfaces
+### 💾 Storage & Devices
 
-VirtIO Balloon (memory ballooning)
+- IDE / SCSI / VirtIO / NVMe disk interfaces
+- VirtIO Balloon (memory ballooning)
+- VirtIO Serial / RNG / 9P shared folders / Vsock
+- USB controllers: EHCI / xHCI / OHCI / UHCI
+- Removable devices: CD-ROM / floppy / SD card
 
-VirtIO Serial / RNG / 9P shared folders / Vsock
+### 🎨 User Interface
 
-USB controllers: EHCI / xHCI / OHCI / UHCI
+- **Material DayNight** — Follow system / Light / Dark manual switching
+- **Bottom Navigation** — VM / Online / Settings / About
+- **VM List** — Displays name and architecture, supports launch, configure, delete
+- **Onboarding Flow** — First launch: virtualization check → license → storage permission → BIOS install
+- **Rounded UI** — Cards, dialogs, spinners, popup menus with unified rounded corners
+- **Vector Icons** — All vector drawables, adapted for light/dark themes
 
-Removable devices: CD-ROM / floppy / SD card
+### 🌐 Online Resources
 
-🎨 User Interface
-Material DayNight — Follow system / Light / Dark manual switching
+- VirtIO-Win driver download
+- Linux ISO downloads (Debian / Ubuntu / Alpine)
+- BIOS / UEFI firmware downloads
+- Limbo update checker
+- Official Wiki / Community
 
-Bottom Navigation — VM / Online / Settings / About
+### 🛠️ Advanced Features
 
-VM List — Displays name and architecture, supports launch, configure, delete
+- QEMU Monitor (Unix socket)
+- QMP remote control
+- Snapshots (savevm / loadvm / delvm)
+- VM import / export
+- Custom QEMU extra parameters
+- Key mapper
+- VNC server
 
-Onboarding Flow — First launch: virtualization check → license → storage permission → BIOS install
+---
 
-Rounded UI — Cards, dialogs, spinners, popup menus with unified rounded corners
+## 📥 Download
 
-Vector Icons — All vector drawables, adapted for light/dark themes
+Download the latest APK from the [Releases](https://github.com/ANIPLXUAN/limbo_aniplus/releases) page.
 
-🌐 Online Resources
-VirtIO-Win driver download
+### Requirements
 
-Linux ISO downloads (Debian / Ubuntu / Alpine)
+- Android 8.0 or higher
+- Android 12.0 or higher recommended
+- ARM64 device (aarch64 acceleration features require kernel support for Gunyah/GZVM)
 
-BIOS / UEFI firmware downloads
+---
 
-Limbo update checker
+## 🚀 Quick Start
 
-Official Wiki / Community
+### 1. Create a VM
 
-🛠️ Advanced Features
-QEMU Monitor (Unix socket)
+1. Open the app and go to the **VM** tab
+2. Tap the **New** button in the bottom-right corner
+3. Select the emulation architecture (x86_64 / ppc / aarch64 / inferno_aarch64 / sparc)
+4. Enter the VM name
+5. Configure CPU, memory, disks, and network in the configuration screen
 
-QMP remote control
+### 2. Configure Disks
 
-Snapshots (savevm / loadvm / delvm)
+1. Locate the **Disks** section in the configuration screen
+2. Tap a disk option to select or create an image file
+3. Supported formats: `.img` (raw), `.qcow2`, `.iso`
 
-VM import / export
+### 3. Launch a VM
 
-Custom QEMU extra parameters
+- Tap the VM name or the ▶ icon in the list to launch directly
+- Tap the ⋮ icon to enter the configuration screen
 
-Key mapper
+### 4. Switch Theme
 
-VNC server
+**Settings → Interface → Theme**, choose from:
 
-📥 Download
-Download the latest APK from the Releases page.
+- Follow system
+- Light
+- Dark
 
-Requirements
-Android 8.0 or higher
+---
 
-Android 12.0 or higher recommended
+## 🔧 Building from Source
 
-ARM64 device (aarch64 acceleration features require kernel support for Gunyah/GZVM)
+### Requirements
 
-🚀 Quick Start
-1. Create a VM
-Open the app and go to the VM tab
+| Tool | Version |
+|---|---|
+| Android Studio | Hedgehog or later |
+| JDK | 17 |
+| Android SDK | API 29 |
+| Android NDK | r25c or later |
+| Gradle | 8.2 |
 
-Tap the New button in the bottom-right corner
+### Build Steps
 
-Select the emulation architecture (x86_64 / ppc / aarch64 / inferno_aarch64 / sparc)
-
-Enter the VM name
-
-Configure CPU, memory, disks, and network in the configuration screen
-
-2. Configure Disks
-Locate the Disks section in the configuration screen
-
-Tap a disk option to select or create an image file
-
-Supported formats: .img (raw), .qcow2, .iso
-
-3. Launch a VM
-Tap the VM name or the ▶ icon in the list to launch directly
-
-Tap the ⋮ icon to enter the configuration screen
-
-4. Switch Theme
-Settings → Interface → Theme, choose from:
-
-Follow system
-
-Light
-
-Dark
-
-🔧 Building from Source
-Requirements
-Tool	Version
-Android Studio	Hedgehog or later
-JDK	17
-Android SDK	API 29
-Android NDK	r25c or later
-Gradle	8.2
-Build Steps
-bash
+```bash
 git clone https://github.com/ANIPLXUAN/limbo_qemu.git
 cd limbo_qemu
 
@@ -399,13 +414,19 @@ cd limbo_qemu
 
 # APK output path
 # limbo-android-x86/build/outputs/apk/debug/limbo-android-x86-debug.apk
-Install to Device
-bash
+```
+
+### Install to Device
+
+```bash
 adb install -r limbo-android-x86/build/outputs/apk/debug/limbo-android-x86-debug.apk
-Native Libraries
+```
+
+### Native Libraries
+
 QEMU binaries and dependencies must be compiled separately or obtained from Releases, and placed in:
 
-text
+```text
 limbo-android-lib/src/main/jniLibs/arm64/
  ├─ libqemu-system-x86_64-11.1.1.so
  ├─ libqemu-system-aarch64.so
@@ -418,8 +439,13 @@ limbo-android-lib/src/main/jniLibs/arm64/
  ├─ libEGL_angle.so
  ├─ libGLESv2_angle.so
  └─ ...
-📂 Project Structure
-text
+```
+
+---
+
+## 📂 Project Structure
+
+```text
 limbo_qemu/
 ├── limbo-android-lib/          # Core library (Java + JNI + resources)
 │   ├── src/main/java/          # Java sources
@@ -450,69 +476,83 @@ limbo_qemu/
 ├── limbo-android-ppc/          # PPC build entry
 ├── limbo-android-sparc/        # SPARC build entry
 └── README.md
-🧩 Related Projects
-Limbo Emulator — Original project by Max Kastanas
-https://github.com/limboemu/limbo
+```
 
-QEMU — Generic machine emulator
-https://www.qemu.org
+---
 
-ALS (AnyLaySys) — Gunyah / GZVM acceleration
-https://github.com/AnyLaySys/als
+## 🧩 Related Projects
 
-SDL2 — Cross-platform multimedia library
-https://www.libsdl.org
+- **Limbo Emulator** — Original project by Max Kastanas  
+  https://github.com/limboemu/limbo
 
-virglrenderer — VirtIO GPU renderer
-https://gitlab.freedesktop.org/virgl/virglrenderer
+- **QEMU** — Generic machine emulator  
+  https://www.qemu.org
 
-🤝 Contributing
+- **ALS (AnyLaySys)** — Gunyah / GZVM acceleration  
+  https://github.com/AnyLaySys/als
+
+- **SDL2** — Cross-platform multimedia library  
+  https://www.libsdl.org
+
+- **virglrenderer** — VirtIO GPU renderer  
+  https://gitlab.freedesktop.org/virgl/virglrenderer
+
+---
+
+## 🤝 Contributing
+
 Issues and Pull Requests are welcome.
 
-Fork this repository
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/xxx`)
+3. Commit your changes (`git commit -m 'feat: add xxx'`)
+4. Push to the branch (`git push origin feature/xxx`)
+5. Open a Pull Request
 
-Create a feature branch (git checkout -b feature/xxx)
+---
 
-Commit your changes (git commit -m 'feat: add xxx')
+## 📜 License
 
-Push to the branch (git push origin feature/xxx)
+This project is distributed under the **GNU General Public License v3.0**.
 
-Open a Pull Request
-
-📜 License
-This project is distributed under the GNU General Public License v3.0.
-
-Original Limbo code: Copyright (C) Max Kastanas 2012, GPL-2.0-or-later
-
-Project modifications: Copyright (C) 2024-2026 ANIPLXUAN, GPL-3.0-or-later
+- Original Limbo code: Copyright (C) Max Kastanas 2012, GPL-2.0-or-later
+- Project modifications: Copyright (C) 2024-2026 ANIPLXUAN, GPL-3.0-or-later
 
 Full license texts:
 
-COPYING — GPL v3.0 full text
+- [COPYING](COPYING) — GPL v3.0 full text
+- [COPYING.GPLv2](COPYING.GPLv2) — GPL v2.0 full text (original Limbo)
 
-COPYING.GPLv2 — GPL v2.0 full text (original Limbo)
+### Third-Party Components
 
-Third-Party Components
-Component	License
-Limbo (original)	GPL-2.0-or-later
-QEMU	GPL-2.0-or-later
-SDL2	zlib License
-virglrenderer	MIT License
-ALS (Gunyah-QEMU / GZVM-QEMU)	See ALS LICENSE
-🙏 Acknowledgements
-Limboemu — Original author of Limbo Emulator
+| Component | License |
+|---|---|
+| Limbo (original) | GPL-2.0-or-later |
+| QEMU | GPL-2.0-or-later |
+| SDL2 | zlib License |
+| virglrenderer | MIT License |
+| ALS (Gunyah-QEMU / GZVM-QEMU) | See [ALS LICENSE](https://github.com/AnyLaySys/als) |
 
-AnyLaySys — Gunyah / GZVM acceleration implementation
+---
 
-QEMU Team — Powerful machine emulator
+## 🙏 Acknowledgements
 
-All Limbo community contributors
+- **Limboemu** — Original author of Limbo Emulator
+- **AnyLaySys** — Gunyah / GZVM acceleration implementation
+- **QEMU Team** — Powerful machine emulator
+- All Limbo community contributors
 
-📮 Contact
-GitHub Issues: Open an issue
+---
 
-GitHub Discussions: Join the discussion
+## 📮 Contact
 
-QQ Group: Click to join
+- GitHub Issues: [Open an issue](https://github.com/ANIPLXUAN/limbo_aniplus/issues)
+- GitHub Discussions: [Join the discussion](https://github.com/ANIPLXUAN/limbo_aniplus/discussions)
+- QQ Group: [Click to join](https://qm.qq.com/q/v43fiddffU)
 
-<p align="center"> <b>Limbo ANIPL Plus</b><br> Made with ❤️ by ANIPLXUAN </p> 
+---
+
+<p align="center">
+  <b>Limbo ANIPL Plus</b><br>
+  Made with ❤️ by ANIPLXUAN
+</p>
