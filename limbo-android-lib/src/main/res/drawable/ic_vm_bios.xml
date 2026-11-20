@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="48dp"
+        android:height="48dp"
+        android:viewportWidth="72"
+        android:viewportHeight="72">
+
+    <!-- 圆角矩形背景 -->
+    <path
+            android:fillColor="@color/card_background"
+            android:strokeColor="@color/card_border"
+            android:strokeWidth="1"
+            android:pathData="M10,0 L62,0 A10,10 0 0 1 72,10 L72,62 A10,10 0 0 1 62,72 L10,72 A10,10 0 0 1 0,62 L0,10 A10,10 0 0 1 10,0 Z" />
+
+    <!-- 字母 B -->
+    <path
+            android:fillColor="@color/card_border"
+            android:pathData="M10,24 L10,48 L18,48 C22,48 24,46 24,42 C24,39 22,37 19,36 C21,35 22,33 22,31 C22,27 20,24 16,24 Z M14,27 L16,27 C18,27 19,28 19,30 C19,32 18,33 16,33 L14,33 Z M14,36 L17,36 C19,36 20,37 20,39 C20,41 19,45 17,45 L14,45 Z" />
+
+    <!-- 字母 I -->
+    <path
+            android:fillColor="@color/card_border"
+            android:pathData="M28,24 L28,27 L32,27 L32,45 L28,45 L28,48 L40,48 L40,45 L36,45 L36,27 L40,27 L40,24 Z" />
+
+    <!-- 字母 O -->
+    <path
+            android:fillColor="@color/card_border"
+            android:pathData="M48,24 C43,24 41,28 41,36 C41,44 43,48 48,48 C53,48 55,44 55,36 C55,28 53,24 48,24 Z M48,27 C51,27 51,31 51,36 C51,41 51,45 48,45 C45,45 45,41 45,36 C45,31 45,27 48,27 Z" />
+
+    <!-- 字母 S -->
+    <path
+            android:fillColor="@color/card_border"
+            android:pathData="M62,24 C58,24 56,26 56,30 C56,33 58,34 61,35 C63,36 64,36 64,38 C64,40 63,45 60,45 C58,45 57,44 57,43 L56,46 C57,47 59,48 61,48 C65,48 67,45 67,41 C67,38 65,36 62,35 C60,34 59,34 59,32 C59,30 60,27 62,27 C64,27 65,28 65,29 L66,26 C65,25 64,24 62,24 Z" />
+
+</vector>

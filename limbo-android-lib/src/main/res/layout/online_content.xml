@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/online_content"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/window_background"
+              android:orientation="vertical"
+              android:visibility="gone">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/toolbar_rounded"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" android:tag="glass_card">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+            <!-- 1. VirtIO-Win 驱动 -->
+            <LinearLayout
+                    android:id="@+id/download_virtio_win"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="15dp" android:tag="glass_card">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下载 VirtIO-Win 驱动"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Windows 虚拟机的 VirtIO 驱动，安装后可大幅提升磁盘和网络性能。约 500MB。"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 2. 下载 Linux ISO -->
+            <LinearLayout
+                    android:id="@+id/download_linux_iso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="15dp" android:tag="glass_card">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下载 Linux 系统镜像"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="提供 Debian、Ubuntu、Alpine 等轻量级 Linux 发行版的 ISO 下载链接。"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 3. 下载 BIOS / UEFI 固件 -->
+            <LinearLayout
+                    android:id="@+id/download_bios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="15dp" android:tag="glass_card">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下载 BIOS / UEFI 固件"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="获取最新版 SeaBIOS、OVMF (UEFI) 固件，替换 Limbo 内置的旧版本。"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 4. 下载 QEMU 版本 -->
+            <LinearLayout
+                    android:id="@+id/download_qemu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="15dp" android:tag="glass_card">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下载 QEMU 版本"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="获取不同版本的 QEMU 二进制文件，支持 9.2.4、10.1.0、11.1.1 等。"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

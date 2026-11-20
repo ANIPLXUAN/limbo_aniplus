@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 深色模式：亮蓝主色，深色背景上更清晰 -->
+    <color name="colorPrimary">#5B8CFF</color>
+    <color name="colorPrimaryDark">#1B2740</color>
+    <color name="colorAccent">#5B8CFF</color>
+</resources>

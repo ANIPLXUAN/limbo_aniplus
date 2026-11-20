@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 强调色：#0058FF -->
+    <color name="colorPrimary">#0058FF</color>
+    <color name="colorPrimaryDark">#0047CC</color>
+    <color name="colorAccent">#0058FF</color>
+
+    <!-- 背景 / 卡片：WPS 白灰 -->
+    <color name="window_background">#F2F3F5</color>
+    <color name="card_background">#FAFAFA</color>
+    <color name="card_border">#0058FF</color>
+    <color name="card_outline">#E6E8EB</color>
+    <!-- 文字三档 -->
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_tertiary">#9CA3AF</color>
+
+    <color name="spinner_color1">#1A1A1A</color>
+
+    <color name="status_success">#0058FF</color>
+    <color name="status_warning">#FA9D3B</color>
+    <color name="status_danger">#FA5151</color>
+
+    <!-- 底栏胶囊：选中=透明（露玻璃），其余=colorPrimary 三档 -->
+    <color name="nav_pill_fill">#4D0058FF</color>
+    <color name="nav_pill_press">#800058FF</color>
+    <color name="nav_pill_outline">#B30058FF</color>
+    <!-- 列表项按下时的一层薄薄 colorPrimary -->
+    <color name="press_overlay">#1F0058FF</color>
+    <!-- 弹窗/弹出菜单的半透明玻璃底（约 70% 不透明白） -->
+    <color name="glass_panel">#B3FFFFFF</color>
+    <!-- 卡片玻璃壳：极淡的玻璃底色 + 细白边 -->
+    <color name="glass_shell">#12FFFFFF</color>
+    <color name="glass_rim">#8CFFFFFF</color>
+</resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/guide_overlay"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/window_background"
+             android:clickable="true"
+             android:focusable="true"
+             android:visibility="gone">
+
+    <!-- 阶段 1：检测虚拟化 -->
+    <LinearLayout
+            android:id="@+id/guide_check_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+        <ImageView
+                android:id="@+id/guide_check_logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_vm_storage" />
+
+        <ProgressBar
+                android:id="@+id/guide_check_spinner"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:indeterminateTint="@color/card_border" />
+
+        <TextView
+                android:id="@+id/guide_check_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:textColor="@color/card_border"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        <Button
+                android:id="@+id/guide_check_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/continue_button"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="继续"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- 阶段 2：许可证 -->
+    <LinearLayout
+            android:id="@+id/guide_license_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:visibility="gone">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="GNU General Public License v2.0"
+                android:textColor="@color/card_border"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp">
+
+            <TextView
+                    android:id="@+id/guide_license_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/card_border"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="4dp" />
+        </ScrollView>
+
+        <Button
+                android:id="@+id/guide_license_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/continue_button"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="我知道了"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- 阶段 3：申请存储权限 -->
+    <LinearLayout
+            android:id="@+id/guide_permission_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:visibility="gone">
+
+        <!-- 顶部：图标 + 标题 -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_folder_outline" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="访问存储权限"
+                    android:textColor="@color/card_border"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 说明文字 -->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="用于访问或创建虚拟磁盘所需要的权限。\n\n授权后 Limbo 才能读写 /sdcard 下的磁盘镜像和 ISO 文件。"
+                android:textColor="@color/card_border"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        <!-- 底部：跳过（左）+ 授权（右） -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/guide_permission_skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="暂时跳过"
+                    android:textColor="@color/card_border"
+                    android:textSize="16sp" />
+
+            <Button
+                    android:id="@+id/guide_permission_grant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/continue_button"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="授权"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 阶段 3：BIOS 安装 -->
+    <LinearLayout
+            android:id="@+id/guide_bios_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:visibility="gone">
+
+        <ProgressBar
+                android:id="@+id/guide_bios_spinner"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:indeterminateTint="@color/card_border" />
+
+        <ImageView
+                android:id="@+id/guide_bios_check"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/guide_check_mark"
+                android:visibility="gone" />
+
+        <TextView
+                android:id="@+id/guide_bios_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="正在安装 BIOS 和映射文件..."
+                android:textColor="@color/card_border"
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/guide_bios_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/continue_button"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="开始吧"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone" />
+    </LinearLayout>
+
+</FrameLayout>

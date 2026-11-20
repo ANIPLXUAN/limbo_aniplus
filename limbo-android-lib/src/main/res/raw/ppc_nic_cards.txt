@@ -1,0 +1,7 @@
+e1000
+ne2k_pci
+pcnet
+rtl8139
+tulip
+virtio
+virtio-net-pci

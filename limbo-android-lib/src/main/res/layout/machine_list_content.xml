@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/machine_list_view"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/window_background"
+             android:visibility="gone">
+
+    <ListView
+            android:id="@+id/machine_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:padding="10dp"
+            android:clipToPadding="false" />
+
+    <TextView
+            android:id="@+id/machine_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="无虚拟机，试着创建一个吧"
+            android:textColor="@color/card_border"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    <!-- 右下角新建按钮 -->
+    <LinearLayout
+            android:id="@+id/new_machine_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="20dp"
+            android:background="@drawable/continue_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新建"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_add" />
+    </LinearLayout>
+
+</FrameLayout>

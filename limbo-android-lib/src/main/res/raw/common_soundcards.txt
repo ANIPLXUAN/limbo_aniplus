@@ -1,0 +1,8 @@
+AC97
+adlib
+cs4231a
+ES1370
+gus
+hda
+sb16
+virito-sound-pci

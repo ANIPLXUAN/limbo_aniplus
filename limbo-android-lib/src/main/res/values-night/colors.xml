@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0058FF</color>
+    <color name="colorPrimaryDark">#0047CC</color>
+    <color name="colorAccent">#0058FF</color>
+
+    <color name="window_background">#111111</color>
+    <color name="card_background">#1C1C1E</color>
+    <color name="card_border">#0058FF</color>
+    <color name="card_outline">#2C2C2E</color>
+
+    <color name="text_primary">#EDEDED</color>
+    <color name="text_secondary">#9CA3AF</color>
+    <color name="text_tertiary">#6B7280</color>
+
+    <color name="spinner_color1">#EDEDED</color>
+
+    <color name="status_success">#0058FF</color>
+    <color name="status_warning">#FA9D3B</color>
+    <color name="status_danger">#FA5151</color>
+    <!-- 弹窗/弹出菜单的半透明玻璃底（约 70% 不透明深色） -->
+    <color name="glass_panel">#B312151A</color>
+</resources>

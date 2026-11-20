@@ -1,0 +1,11 @@
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:id="@+id/customSpinnerDropDownItem"
+                 style="@style/leftEllipsisSpinnerDropDownItem"
+                 android:layout_width="fill_parent"
+                 android:layout_height="?android:attr/listPreferredItemHeight"
+                 android:background="@android:color/transparent"
+                 android:paddingLeft="12dp"
+                 android:paddingRight="12dp"
+                 android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                 android:checkMarkTint="@color/card_border"
+                 android:textColor="@color/card_border" />

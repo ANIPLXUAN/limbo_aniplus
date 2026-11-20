@@ -1,0 +1,49 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="48dp"
+        android:height="48dp"
+        android:viewportWidth="24"
+        android:viewportHeight="24">
+
+    <!-- 顶部域名栏 -->
+    <path
+            android:fillColor="@color/card_border"
+            android:pathData="M4,5 h16 a1,1 0 0 1 1,1 v2 a1,1 0 0 1 -1,1 H4 a1,1 0 0 1 -1,-1 V6 a1,1 0 0 1 1,-1 Z"/>
+
+    <!-- 域名文字线条 -->
+    <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M6,7 h3 v0.5 H6 Z"/>
+    <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M9.5,7 h1 v0.5 h-1 Z"/>
+    <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M11,7 h2 v0.5 h-2 Z"/>
+
+    <!-- 解析箭头 -->
+    <path
+            android:fillColor="@android:color/transparent"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="0.8"
+            android:pathData="M12,10 L12,13 M10,11 L12,13 L14,11"/>
+
+    <!-- 服务器主体 -->
+    <path
+            android:fillColor="@color/card_border"
+            android:pathData="M5,14 h14 a1,1 0 0 1 1,1 v4 a1,1 0 0 1 -1,1 H5 a1,1 0 0 1 -1,-1 v-4 a1,1 0 0 1 1,-1 Z"/>
+
+    <!-- 服务器指示灯（用 path 画圆） -->
+    <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M7.5,16 m-0.6,0 a0.6,0.6 0 1,0 1.2,0 a0.6,0.6 0 1,0 -1.2,0"/>
+    <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M7.5,17.5 m-0.6,0 a0.6,0.6 0 1,0 1.2,0 a0.6,0.6 0 1,0 -1.2,0"/>
+
+    <!-- 底部网络线 -->
+    <path
+            android:fillColor="@android:color/transparent"
+            android:strokeColor="@color/card_border"
+            android:strokeWidth="0.8"
+            android:pathData="M7,20 L7,21 M12,20 L12,21 M17,20 L17,21"/>
+</vector>

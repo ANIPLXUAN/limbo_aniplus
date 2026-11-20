@@ -1,0 +1,98 @@
+* Limbo ANIPL PLUS 1.0.3-x86 更新日志
+·virgl服务成功运行，但是使用会黑屏（抢修中...）
+·修改了关于
+·增加了SDL界面选项，快照‘QEMU监视器’缩放功能
+·更改了包名
+·修复了文件管理器退回根目录/出不来的BUG
+添加了NVMe接口
+去除了旧版文件管理器选项
+改了按键映射器的部分颜色
+* Limbo ANIPL PLUS 0.0.3-x86 更新日志
+SDL2退回2.0.8（有BUG）
+右上角选择添加了切换qemu版本
+添加了EGL—VNC补丁
+添加了2个qemu版本9.2.4 10.1.0
+在设置中添加了virtio设备选项但是vocks没编译
+添加了virgl的显卡和标准virgl后端+zink支持，但是服务无法运行
+强制使用默认的文件管理器
+* Limbo ANIPL PLUS 0.0.2-x86 更新日志
+改了VMExecutor适配qemu11.1.1
+静态添加了网络后端进qemu
+修复了QEMULOG
+声卡还是有BUG
+用了SDL2.so版本2.26
+添加了qemu11.1.1对应的roms
+* Limbo ANIPL PLUS 0.0.1-x86 更新日志
+添加了libglib2.0.so版本2.7.4
+引用了QEMU11.1.1的内核
+超多BUG，无QEMULOG
+* Limbo Emulator Plus 2.0.6-x86 更新日志（简体中文/zh_CN）
+Please visit the official site for English changelogs.
+注：发现什么bug请卸载重装尝试后再来报告问题！
+发布日期：2024/3/17
+·新增已分区磁盘
+·新增检查更新按钮
+·修复某些情况下点击启动按钮无反应的bug
+·固定TCG缓存大小为4G
+·修复下载更新时仍弹出旧版下载窗口的bug
+·按键映射器高级按钮列表添加 Windows徽标键、BackSpace、Del、Caps 按键
+·修复按键映射器鼠标事件不生效的bug
+·修复了关闭历史更新日志窗口是同时关闭更新日志窗口的bug
+* （紧急更新）Limbo Emulator Plus 2.0.5-x86 更新日志（简体中文/zh_CN）
+发布日期：2024/3/3
+更新完成后请清除应用数据才能正常使用！！！
+·修复声卡和网卡会错误地被设置为“无”导致无法启动的bug
+
+* Limbo Emulator Plus 2.0.4-x86 更新日志（简体中文/zh_CN）
+Please visit the official site for English changelogs.
+更新完成后请清除应用数据才能正常使用！！！
+发布日期：2024/3/3
+·添加繁体中文（台湾）语言支持
+·新增功能：显存设置（在显示卡选项下方）
+·实装"USB控制器"选项
+·添加virtio-gpu-pci显示卡
+·由于AVX在MTTCG模式下并不可用，将"启用AVX"改为"指令集优化"
+·更改"高级工具"和"Limbo Wiki"指向链接
+·添加"操作系统"菜单选项
+·美化"下载"窗口
+·将之前的更新日志移动到"历史更新日志"
+·"操作系統"列表新增VirtIO和Windows精简版，移除"其它"
+·完善一处遗漏的汉化（VM Running）
+·修复检查更新器
+
+* Limbo Emulator Plus 2.0.3-x86 更新日志（简体中文/zh_CN）
+发布日期：2024/1/21
+·使用全新主题美化所有图标
+·更改软件图标
+·更改应用名称为“Limbo Emulator Plus”
+·完善和优化汉化
+·在导出机器出新增提示
+·新增“下载”窗口
+·更改创建机器是的系统镜像列表
+·去除qxl显卡，添加ramfb
+·将默认DNS服务器更改为1.1.1.1
+·搭建官网，将GitHub链接更改为官网连接
+·高级中新增“USB控制器”选项（未实装）
+
+* Limbo Plus 2.0.2-x86 更新日志（简体中文/zh_CN）
+·新增 更详细的汉化，并更改了一些代码避免出现如“-soundhw 无”的bug
+·新增 更多CPU支持
+·按键映射器新增上下左右方向键
+·修复 Windows徽标键无法使用的问题
+
+* Limbo Plus 2.0.1-x86 更新日志（简体中文/zh_CN）
+*此版本使用了Android Studio重做并且更改了签名，所以需要重新安装才能使用！
+·新增 内置强制多核命令，无需手动输入“-smp n,cores=n”命令
+·新增 内置多个EFI固件，包括vmwareEFI、ovmfEFI，兼容x86、x86_64（、arm、aarch64）架构
+·新增 启用AVX选项并删除了禁用TSC这个无用的选项
+·新增 在启动时自动添加SD卡驱动器（为日后版本做准备）
+·新增 按键映射器的特殊按键按钮列表选项，包括F1~F12、Esc、Windows徽标键
+·新增 共享文件夹打开界面和SD卡选项，但是尚无法生效
+·更改 重做了汉化方式，现已实现中英双语共存，显示语言取决于手机系统
+·更改 检查更新链接
+·更改 多个初始配置，包括但不限于CPU、内存
+·更改 将软件名改为"Limbo Plus Enhanced x86"
+·修复 Limbo版本和QEMU版本显示为null的问题
+·修复 频繁报错无法获取版本的问题
+·修复 无法与原版Limbo共存的问题
+·修复 检查更新失效的问题

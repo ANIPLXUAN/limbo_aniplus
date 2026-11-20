@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <!-- 浅色下状态栏用深色图标；夜间在 values-night 覆盖为 false -->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- 全局对话框样式：圆角 -->
+        <item name="alertDialogTheme">@style/RoundedDialog</item>
+        <item name="android:alertDialogTheme">@style/RoundedDialog</item>
+
+        <!-- 弹出菜单圆角 -->
+        <item name="popupMenuStyle">@style/RoundedPopupMenu</item>
+        <item name="android:popupMenuStyle">@style/RoundedPopupMenu</item>
+    </style>
+
+    <!-- 无 ActionBar 变体：界面使用自绘 Toolbar -->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/card_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- 设置界面主题 -->
+    <style name="SettingsTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- 设置页里的弹窗也走同一个半透明圆角样式 -->
+        <item name="alertDialogTheme">@style/RoundedDialog</item>
+        <item name="android:alertDialogTheme">@style/RoundedDialog</item>
+    </style>
+
+    <!-- 圆角对话框样式（原文件重复定义了两次，已合并为一个） -->
+    <style name="RoundedDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_rounded</item>
+        <item name="android:windowMinWidthMajor">56%</item>
+        <item name="android:windowMinWidthMinor">56%</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <!-- 圆角弹出菜单样式 -->
+    <style name="RoundedPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_rounded</item>
+    </style>
+
+    <!-- 自定义 Dialog（如 DrivesDialogBox）的半透明圆角窗口 -->
+    <style name="Transparent" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_rounded</item>
+    </style>
+
+    <style name="leftEllipsisSpinnerDropDownItem" parent="@android:style/Widget.DropDownItem.Spinner">
+        <item name="android:ellipsize">start</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="leftEllipsisSimpleSpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:ellipsize">start</item>
+        <item name="android:singleLine">true</item>
+    </style>
+</resources>

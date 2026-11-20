@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="60dp"
+        android:height="60dp"
+        android:viewportWidth="24"
+        android:viewportHeight="24">
+    <!-- 芯片主体 -->
+    <path
+            android:fillColor="@color/card_border"
+            android:pathData="M7,7h10v10H7z"/>
+    <!-- 中心镂空 -->
+    <path
+            android:fillColor="@color/window_background"
+            android:pathData="M9,9h6v6H9z"/>
+    <!-- 上下左右引脚，各 3 根，对称 -->
+    <path
+            android:fillColor="@color/card_border"
+            android:pathData="M8,4h1v3H8zM11,4h1v3h-1zM14,4h1v3h-1zM8,17h1v3H8zM11,17h1v3h-1zM14,17h1v3h-1zM4,8h3v1H4zM17,8h3v1h-3zM4,11h3v1H4zM17,11h3v1h-3zM4,14h3v1H4zM17,14h3v1h-3z"/>
+</vector>

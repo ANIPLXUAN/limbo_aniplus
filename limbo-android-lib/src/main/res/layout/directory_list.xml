@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/window_background">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/window_background">
+
+        <TextView
+                android:id="@+id/currDir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+
+                android:text=""
+                android:textSize="20dip"
+                android:textColor="@color/text_secondary"
+                android:padding="8dp" />
+
+        <Button
+                android:id="@+id/select_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/select"
+                android:textColor="@color/window_background"
+                android:backgroundTint="@color/card_border" />
+
+        <ListView
+                android:id="@id/android:list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/select_button"
+                android:layout_below="@id/currDir"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="-2dp"
+                android:divider="@color/window_background"
+                android:dividerHeight="1dp"
+                android:background="@color/window_background" />
+
+    </RelativeLayout>
+
+</LinearLayout>

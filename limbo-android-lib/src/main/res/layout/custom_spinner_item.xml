@@ -1,0 +1,7 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/customSpinnerItem"
+          style="@style/leftEllipsisSimpleSpinnerItem"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/rounded_spinner_item"
+          android:textColor="@color/card_border" />

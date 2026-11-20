@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 顶部工具条：默认全透明，只保留底部圆角 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <solid android:color="#00000000" />
+    <corners
+            android:topLeftRadius="0dp" android:topRightRadius="0dp"
+            android:bottomLeftRadius="16dp" android:bottomRightRadius="16dp" />
+</shape>

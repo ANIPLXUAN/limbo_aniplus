@@ -1,0 +1,8 @@
+Fujitsu MB86904
+Fujitsu MB86907
+TI MicroSparc II
+TI MicroSparc IIep
+TI SuperSparc 40
+TI SuperSparc 51
+TI SuperSparc 60
+TI SuperSparc 61

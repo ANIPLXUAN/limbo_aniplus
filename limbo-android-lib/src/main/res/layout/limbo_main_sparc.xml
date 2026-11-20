@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/main_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/window_background"
+             android:keepScreenOn="true">
+
+    <!-- 主内容区 -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <!-- 内容区：占剩余空间 -->
+        <FrameLayout
+                android:id="@+id/content_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            <!-- 虚拟机界面 -->
+            <LinearLayout
+                    android:id="@+id/vm_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@drawable/toolbar_rounded"
+                        app:titleTextColor="@color/text_primary" android:tag="glass_card" />
+
+                <FrameLayout
+                        android:id="@+id/vm_view_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <!-- 配置视图（原来的内容） -->
+                    <LinearLayout
+                            android:id="@+id/machine_config_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                        <LinearLayout
+                                android:id="@+id/scroll_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            <androidx.core.widget.NestedScrollView
+                                    android:id="@+id/scroll_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fadeScrollbars="false">
+
+                                <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/window_background"
+                                        android:focusable="true"
+                                        android:focusableInTouchMode="true"
+                                        android:orientation="vertical"
+                                        android:padding="10dp">
+
+                                    <include layout="@layout/machine_layout" />
+                                    <include layout="@layout/status_layout" />
+                                    <include layout="@layout/controls_layout" />
+                                    <include layout="@layout/userinterface_layout" />
+                                    <include layout="@layout/board_layout" />
+                                    <include layout="@layout/storage_layout" />
+                                    <include layout="@layout/removable_storage_layout" />
+                                    <include layout="@layout/boot_layout" />
+                                    <include layout="@layout/graphics_layout" />
+                                    <include layout="@layout/audio_layout" />
+                                    <include layout="@layout/network_layout" />
+                                    <include layout="@layout/advanced_layout" />
+
+                                    <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/Watermark"
+                                            android:gravity="center_horizontal"
+                                            android:textSize="11sp" />
+                                </LinearLayout>
+                            </androidx.core.widget.NestedScrollView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 列表视图 -->
+                    <include layout="@layout/machine_list_content" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- 线上界面 -->
+            <include layout="@layout/online_content" />
+
+            <!-- 关于界面 -->
+            <include layout="@layout/about_content" />
+
+        </FrameLayout>
+
+        <!-- 底部导航栏 -->
+        <include layout="@layout/bottom_nav" />
+
+    </LinearLayout>
+
+    <!-- 检测 Overlay，覆盖在最上层 -->
+    <include layout="@layout/guide_overlay" />
+
+</FrameLayout>

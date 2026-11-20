@@ -1,0 +1,160 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/Interface">
+        <ListPreference
+                android:defaultValue="0"
+                android:entries="@array/themeLabels"
+                android:entryValues="@array/themeValues"
+                android:key="themePref"
+                android:summary="@string/ThemeSummary"
+                android:title="@string/Theme" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/graphic">
+        <ListPreference
+                android:defaultValue="system"
+                android:entries="@array/glesModeLabels"
+                android:entryValues="@array/glesModeValues"
+                android:key="glesModePref"
+                android:summary="选择 VirGL 渲染后端"
+                android:title=" 渲染后端" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/screen">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/orientationLabels"
+            android:entryValues="@array/orientationValues"
+            android:key="orientationPref"
+            android:summary="@string/orientation"
+            android:title="@string/orientation" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="AlwaysShowMenuToolbar"
+            android:summary="@string/AlwaysShowToolbar"
+            android:title="@string/AlwaysToolbar" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="ShowFullscreen"
+            android:summary="@string/showfullscreen"
+            android:title="@string/fullscreen" />
+
+        <ListPreference
+            android:defaultValue="3"
+            android:entries="@array/keyMapperLabels"
+            android:entryValues="@array/keyMapperValues"
+            android:key="keyMapperSize"
+            android:summary="@string/KeyMapperButtonLayout"
+            android:title="@string/KeyMapperLayout" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preventMouseOutOfBounds"
+            android:summary="@string/PreventMouseDescr"
+            android:title="@string/PreventMouseOutOfBounds" />
+
+        <ListPreference
+            android:defaultValue="100"
+            android:entries="@array/keyPressDelayLabels"
+            android:entryValues="@array/keyPressDelayValues"
+            android:key="keyPressDelay"
+            android:summary="@string/keyPressDelaySummary"
+            android:title="@string/keyPressDelay" />
+
+        <ListPreference
+            android:defaultValue="100"
+            android:entries="@array/mouseButtonDelayLabels"
+            android:entryValues="@array/mouseButtonDelayValues"
+            android:key="mouseButtonDelay"
+            android:summary="@string/mouseButtonDelaySummary"
+            android:title="@string/mouseButtonDelay" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/advanced">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="HighPrio"
+            android:summary="@string/RunVMThreadHighPriority"
+            android:title="@string/HighPriority" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="QMP">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enableQMP"
+            android:summary="@string/EnableQMPServerSummary"
+            android:title="@string/EnableQMPServer" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="enableQMP"
+            android:key="enableExternalQMP"
+            android:summary="@string/AllowExternalQMPConnectionsSummary"
+            android:title="@string/AllowExternalQMPConnections" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="VNC">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="enableQMP"
+            android:key="enableVNCPassword"
+            android:summary="@string/EnableVNCPassword"
+            android:title="@string/EnableVNCPassword" />
+
+        <Preference
+            android:dependency="enableVNCPassword"
+            android:key="vncPass"
+            android:summary="@string/SetVNCPassword"
+            android:title="@string/SetVNCPassword" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="enableQMP"
+            android:key="enableExternalVNC"
+            android:summary="@string/AllowExternalVNCSummary"
+            android:title="@string/AllowExternalVNCConnections" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="VirtIO 设备">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enableVirtioBalloon"
+            android:summary="@string/EnableVirtioBalloonSummary"
+            android:title="@string/EnableVirtioBalloon" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enableVirtioSerial"
+            android:summary="@string/EnableVirtioSerialSummary"
+            android:title="@string/EnableVirtioSerial" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enableVirtioRng"
+            android:summary="@string/EnableVirtioRngSummary"
+            android:title="@string/EnableVirtioRng" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/disk">
+        <ListPreference
+            android:defaultValue="@string/Default"
+            android:entries="@array/diskCacheLabels"
+            android:entryValues="@array/diskCacheValues"
+            android:key="diskCachePref"
+            android:summary="@string/diskCacheSummary"
+            android:title="@string/diskCache" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/fixes">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="ignoreBreakpointInvalidation"
+            android:summary="@string/IgnoreBreakpointInvalidationSummary"
+            android:title="@string/IgnoreBreakpointInvalidation" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
