@@ -515,4 +515,4 @@ GitHub Discussions: Join the discussion
 
 QQ Group: Click to join
 
-<p align="center"> <b>Limbo ANIPL Plus</b><br> Made with ❤️ by ANIPLXUAN </p> ```
+<p align="center"> <b>Limbo ANIPL Plus</b><br> Made with ❤️ by ANIPLXUAN </p> 
